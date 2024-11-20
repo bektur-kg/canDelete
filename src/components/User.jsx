@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from './User.module.css';
 
 function User({name, company, phone, website, email}) {
-    const [position, setPosition] = useState();
+    const [position, setPosition] = useState("junior");
     const [isMessageActive, setIsMessageActive] = useState(false);
 
     return (
@@ -13,8 +13,8 @@ function User({name, company, phone, website, email}) {
             <p>Phone: {phone}</p>
             <p>Website: {website}</p>
             <p>Email: {email}</p>
-            {isMessageActive && (<p>Some message displayed</p>)}
-            <button onClick={() => setIsMessageActive(!isMessageActive)}>some text</button>
+            <p>Position: {position}</p>
+            <button onClick={() => setPosition(!isMessageActive)}>Promote</button>
         </div>
     );
 }
