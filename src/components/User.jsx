@@ -3,6 +3,7 @@ import styles from './User.module.css';
 
 function User({name, company, phone, website, email}) {
     const [position, setPosition] = useState();
+    const [isMessageActive, setIsMessageActive] = useState(false);
 
     return (
         <div className={styles.root}>
@@ -12,6 +13,7 @@ function User({name, company, phone, website, email}) {
             <p>Phone: {phone}</p>
             <p>Website: {website}</p>
             <p>Email: {email}</p>
+            <button>some text</button>
         </div>
     );
 }
