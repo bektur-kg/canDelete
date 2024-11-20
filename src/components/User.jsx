@@ -3,7 +3,6 @@ import styles from './User.module.css';
 
 function User({name, company, phone, website, email}) {
     const [position, setPosition] = useState("junior");
-    const [isMessageActive, setIsMessageActive] = useState(false);
 
     return (
         <div className={styles.root}>
@@ -14,7 +13,7 @@ function User({name, company, phone, website, email}) {
             <p>Website: {website}</p>
             <p>Email: {email}</p>
             <p>Position: {position}</p>
-            <button onClick={() => setPosition(!isMessageActive)}>Promote</button>
+            <button onClick={() => setPosition("middle")}>Promote</button>
         </div>
     );
 }
