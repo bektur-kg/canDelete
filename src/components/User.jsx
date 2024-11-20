@@ -13,7 +13,8 @@ function User({name, company, phone, website, email}) {
             <p>Phone: {phone}</p>
             <p>Website: {website}</p>
             <p>Email: {email}</p>
-            <button>some text</button>
+            {isMessageActive && (<p>Some message displayed</p>)}
+            <button onClick={() => setIsMessageActive(!isMessageActive)}>some text</button>
         </div>
     );
 }
